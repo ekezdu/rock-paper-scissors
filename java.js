@@ -5,10 +5,19 @@
 //if else statements to return rock paper or scissors corresponding with the numbers 
 
 
-let result = getComputerChoice(2);
-
-
 function getComputerChoice(max)
 {
     return Math.floor(Math.random()* max);
 }
+
+if (getComputerChoice(3) === 0) {
+    console.log("rock")
+}
+    else if (getComputerChoice(3) === 1)
+    {
+         console.log("paper");
+    }
+    else if (getComputerChoice(3) === 2)
+    {
+        console.log("scissors");
+    }

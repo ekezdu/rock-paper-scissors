@@ -14,7 +14,22 @@ function getComputerChoice(max)
 }
 
 
-if (getComputerChoice(3) === 0) {
+
+
+//Create a prompt for the user to insert their answer rock paper or scissors
+//Prompt is to be called "getHumanChoice" 
+//Assume the user will write a valid choice. 
+
+let humanChoicePrompt = prompt("rock, paper, scissors?");
+
+function getHumanChoice()
+{
+    humanChoicePrompt;
+}
+
+
+if (getComputerChoice(3) === 0) 
+{
     console.log("rock")
 }
     else if (getComputerChoice(3) === 1)
@@ -26,5 +41,3 @@ if (getComputerChoice(3) === 0) {
         console.log("scissors");
     }
 
-
-//Create a prompt for the user to insert their answer rock paper or scissors

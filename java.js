@@ -1,3 +1,6 @@
+//STEP 1
+
+
 // create a function named getComputerChoice
 //getComputerChoice returns "rock" "paper" or "scissors"
 
@@ -10,14 +13,18 @@ function getComputerChoice(max)
     return Math.floor(Math.random()* max);
 }
 
+
 if (getComputerChoice(3) === 0) {
     console.log("rock")
 }
     else if (getComputerChoice(3) === 1)
     {
-         console.log("paper");
+        console.log("paper");
     }
-    else if (getComputerChoice(3) === 2)
+    else
     {
         console.log("scissors");
     }
+
+
+//Create a prompt for the user to insert their answer rock paper or scissors

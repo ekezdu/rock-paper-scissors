@@ -1,55 +1,67 @@
-
-
-// create a function named getComputerChoice
-//getComputerChoice returns "rock" "paper" or "scissors"
-
-//use math.random and math.floor to generate numbers 0, 1, or 2
-//if else statements to return rock paper or scissors corresponding with the numbers 
-
-
-function getComputerChoice(max)
-{
-    return (Math.floor(Math.random()* max));
-
-}
-
-
-//Create a prompt for the user to insert their answer rock paper or scissors
-//Prompt is to be called "getHumanChoice" 
-//Assume the user will write a valid choice. 
-// return the value of the prompt
-
+//VARIABLES
+let choice = (Math.floor(Math.random() * 3));
 let humanChoicePrompt = prompt("rock, paper, scissors?");
+let humanScore;
+let computerScore;
+
+
+ 
+// HUMAN CHOICE
 
 function getHumanChoice()
 {
-    humanChoicePrompt;
-    
+    return humanChoicePrompt;
 }
-console.log(humanChoicePrompt);
+//LOG CHECK
+console.log(getHumanChoice());
 
-let computerChoice = getComputerChoice(3);
+//COMPUTER CHOICE
 
-
-if (computerChoice === 0) 
+function getComputerChoice()
 {
-    console.log("rock");
+   if (choice === 0)
+   {
+        let rock = "rock";
+        return rock;
+   }
+    else if (choice === 1)
+    {
+        let paper = "paper";
+        return paper;
+    }
+    else 
+    {
+        let scissors = "scissors";
+        return scissors;
+    }
     
 }
-    else if (computerChoice === 1)
-    {
-        console.log("paper");
-        
-    }
-    else
-    {
-        
-        console.log("scissors");
-    }
+//FUNCTION CALL
+getComputerChoice();
+//LOG CHECK
+console.log(getComputerChoice());
 
-console.log(getComputerChoice(3));
+//NEXT STEP 
 
-// track scores
-//create variables HumanScore and ComputerScore
-//they start with 0
-//check they work by printing in console
+// Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
+
+//     Create a new function named playRound.
+
+//     Define two parameters for playRound: humanChoice and computerChoice. Use these two parameters to take the human and computer choices as arguments.
+
+//     Make your function’s humanChoice parameter case-insensitive so that players can input “rock”, “ROCK”, “RocK”, or other variations.
+
+//     Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
+
+//     Increment the humanScore or computerScore variable based on the round winner.
+
+function playRound(humanChoice, computerChoice) 
+{
+  // your code here!
+}
+console.log(humanScore);
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+

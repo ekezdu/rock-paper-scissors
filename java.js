@@ -1,8 +1,5 @@
 //VARIABLES
 
-let humanScore = 0;
-let computerScore = 0;
-
 
 // HUMAN CHOICE
 
@@ -49,89 +46,106 @@ function getComputerChoice()
 
 
 
-function playRound(a, b) {
-  console.log(a);
-  console.log(b);
- 
 
-  //B = ROCK
-    if ((a == "rock") && (b == "rock"))
-    {
-        console.log(b = "you tied!");
-    }
 
-    else if ((a == "paper") && (b == "rock"))
-    {
-        console.log(b = "you win! paper beats rock :(");
-    }
 
-    else if ((a == "scissors") && (b == "rock"))
-    {
-        console.log(b = "you lost! rock beats scissors :)");
-    }
+function playGame()
+{
+//VARIABLES
+    let humanScore = 0;
+    let computerScore = 0;
 
-//B = PAPER
-    else if ((a == "rock") && (b == "paper"))
-    {
-        console.log(b = "you lost! paper beats rock :)");
-    }
+    const roundOneX= getHumanChoice();
+    const roundOneY = getComputerChoice();
 
-    else if ((a == "paper") && (b == "paper"))
-    {
-        console.log(b = "you tied!");
-    }
+    const roundTwoX= getHumanChoice();
+    const roundTwoY = getComputerChoice();
 
-    else if ((a == "scissors") && (b == "paper"))
-    {
-        console.log(b = "you win! scissors beats paper :(");
-    }
 
-//B = SCISSORS
-    else if ((a == "rock") && (b == "scissors"))
+    function roundResult()
     {
-        console.log(b = "you win! rock beats scissors :(");
+        alert("okay go again!");
     }
+//PLAYROUND FUNCTION
+        function playRound(a, b) {
+        console.log("YOUR GUESS: " + a);
+        console.log("MY GUESS: " + b);
 
-    else if ((a == "paper") && (b == "scissors"))
-    {
-        console.log(b = "you lost! scissors beats paper :)");
-    }
 
-    else if ((a == "scissors") && (b == "scissors"))
-    {
-        console.log(b = "you tied!");
-    }
-//ELSE
-    else
-    {
-        console.log(b = "please enter a valid answer :(");
-    }
+
+        //B = ROCK
+            if ((a == "rock") && (b == "rock"))
+            {
+                console.log(b = "you tied!");
+            }
+
+            else if ((a == "paper") && (b == "rock"))
+            {
+                console.log(b = "you win! paper beats rock :(");
+                humanScore++
+            }
+
+            else if ((a == "scissors") && (b == "rock"))
+            {
+                console.log(b = "you lost! rock beats scissors :)");
+                computerScore++
+            }
+
+        //B = PAPER
+            else if ((a == "rock") && (b == "paper"))
+            {
+                console.log(b = "you lost! paper beats rock :)");
+                computerScore++
+            }
+
+            else if ((a == "paper") && (b == "paper"))
+            {
+                console.log(b = "you tied!");
+            }
+
+            else if ((a == "scissors") && (b == "paper"))
+            {
+                console.log(b = "you win! scissors beats paper :(");
+                humanScore++
+            }
+
+        //B = SCISSORS
+            else if ((a == "rock") && (b == "scissors"))
+            {
+                console.log(b = "you win! rock beats scissors :(");
+                humanScore++
+            }
+
+            else if ((a == "paper") && (b == "scissors"))
+            {
+                console.log(b = "you lost! scissors beats paper :)");
+                computerScore++
+            }
+
+            else if ((a == "scissors") && (b == "scissors"))
+            {
+                console.log(b = "you tied!");
+            }
+        //ELSE
+            else
+            {
+                console.log(b = "please enter a valid answer :(");
+            }
+            console.log("YOUR SCORE " + humanScore);
+        console.log("MY SCORE " +computerScore);
+        }
+    playRound(roundOneX, roundOneY);
+    roundResult();
+    playRound(roundTwoX, roundTwoY);
+
 }
 
-
-const x = getHumanChoice();
-const y = getComputerChoice();
-
-
-playRound(x, y);
-// Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
-
-//     Create a new function named playRound. OKAY.
-
-//     Define two parameters for playRound: humanChoice and computerChoice. Use these two parameters to take the human and computer choices as arguments. OKAY.
-
-//     Make your function’s humanChoice parameter case-insensitive so that players can input “rock”, “ROCK”, “RocK”, or other variations. OKAY.
-
-//     Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
-
-//     Increment the humanScore or computerScore variable based on the round winner.
-
-
+playGame();
 
 // Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
 
-//     Create a new function named playGame.
-//     Move your playRound function and score variables so that they’re declared inside of the new playGame function
+//     Create a new function named playGame. OKAY!
+//     Move your playRound function and score variables so that they’re declared inside of the new playGame function OKAY!
 //     Play 5 rounds by calling playRound 5 times.
 //         Hint: When you assign a function call to a variable, the return value of that function is assigned to the variable. Accessing the variable afterward will only provide the assigned value; it doesn’t recall the function. You need to recall the choice functions to get new choices for each round.
 //         Re-work your previous functions or create more helper functions if necessary. Specifically, you may want to change the return values to something more useful.
@@ -163,15 +177,3 @@ playRound(x, y);
 
 
 
-
-// function playRound(humanChoice, computerChoice) {
-//   console.log(humanChoice);
-//   console.log(computerChoice);
-// }
-
-
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
-
-
-// playRound(humanSelection, computerSelection);

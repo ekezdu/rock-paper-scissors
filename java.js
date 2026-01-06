@@ -53,45 +53,58 @@ function playRound(a, b) {
   console.log(a);
   console.log(b);
  
-    if ((a == "rock"), (b == "rock"))
+
+  //B = ROCK
+    if ((a == "rock") && (b == "rock"))
     {
-        console.log(a = "you chose rock, they chose rock");
+        console.log(b = "you chose rock, they chose rock");
     }
-    if ((a == "paper"), (b == "rock"))
+
+    else if ((a == "paper") && (b == "rock"))
     {
-        console.log(a = "you chose paper, they chose rock");
+        console.log(b = "you chose paper, they chose rock");
     }
-    if ((a == "scissors"), (a == "rock"));
+
+    else if ((a == "scissors") && (b == "rock"))
     {
-        console.log("you chose scissors, they chose rock");
+        console.log(b = "you chose scissors, they chose rock");
     }
-    if ((a == "rock"), (b == "paper"))
+
+//B = PAPER
+    else if ((a == "rock") && (b == "paper"))
     {
-        console.log("you chose rock, they chose paper");
+        console.log(b = "you chose rock, they chose paper");
     }
-    if ((a == "paper"), (b == "paper"))
+
+    else if ((a == "paper") && (b == "paper"))
     {
-        console.log("you chose paper, they chose paper");
+        console.log(b = "you chose paper, they chose paper");
     }
-    if ((a == "scissors"), (b == "paper"))
+
+    else if ((a == "scissors") && (b == "paper"))
     {
-        console.log("you chose scissors, they chose paper");
+        console.log(b = "you chose scissors, they chose paper");
     }
-    if ((a == "rock"), (b == "scissors"))
+
+//B = SCISSORS
+    else if ((a == "rock") && (b == "scissors"))
     {
-        console.log("you chose rock, they chose scissors");
+        console.log(b = "you chose rock, they chose scissors");
     }
-    if ((a == "paper"), (b == "scissors"))
+
+    else if ((a == "paper") && (b == "scissors"))
     {
-        console.log("you chose paper, they chose scissors");
+        console.log(b = "you chose paper, they chose scissors");
     }
-    if ((a == "scissors"), (b == "scissors"))
+
+    else if ((a == "scissors") && (b == "scissors"))
     {
-        console.log("you chose scissors, they chose scissors");
+        console.log(b = "you chose scissors, they chose scissors");
     }
+//ELSE
     else
     {
-        console.log(a = "your mom");
+        console.log(b = "please enter a valid answer :(");
     }
 }
 

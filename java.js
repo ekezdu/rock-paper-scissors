@@ -155,6 +155,10 @@ function runRounds()
         } 
 
     roundResult();
+
+//
+
+alert("your score:" + humanScore + "," + "my score" + computerScore);
 //
     if (humanScore > computerScore)
     {
@@ -176,6 +180,10 @@ function runRounds()
         } 
 
     roundResult();
+//
+
+alert("your score:" + humanScore + "," + "my score" + computerScore);
+
 //
 
     if (humanScore > computerScore)
@@ -200,6 +208,10 @@ function runRounds()
     roundResult();
 //
 
+alert("your score:" + humanScore + "," + "my score" + computerScore);
+
+//
+
     if (humanScore > computerScore)
     {
         alert("stop winning D:");
@@ -220,8 +232,11 @@ function runRounds()
         } 
 
     roundResult();
+//
 
+alert("your score:" + humanScore + "," + "my score" + computerScore);
 
+//
     if (humanScore > computerScore)
     {
         alert("nyoooooo");
@@ -242,6 +257,11 @@ function runRounds()
         } 
 
     roundResult();
+//
+
+alert("your score:" + humanScore + "," + "my score" + computerScore);
+
+//
 
 
     if (humanScore > computerScore)

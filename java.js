@@ -57,49 +57,49 @@ function playRound(a, b) {
   //B = ROCK
     if ((a == "rock") && (b == "rock"))
     {
-        console.log(b = "you chose rock, they chose rock");
+        console.log(b = "you tied!");
     }
 
     else if ((a == "paper") && (b == "rock"))
     {
-        console.log(b = "you chose paper, they chose rock");
+        console.log(b = "you win! paper beats rock :(");
     }
 
     else if ((a == "scissors") && (b == "rock"))
     {
-        console.log(b = "you chose scissors, they chose rock");
+        console.log(b = "you lost! rock beats scissors :)");
     }
 
 //B = PAPER
     else if ((a == "rock") && (b == "paper"))
     {
-        console.log(b = "you chose rock, they chose paper");
+        console.log(b = "you lost! paper beats rock :)");
     }
 
     else if ((a == "paper") && (b == "paper"))
     {
-        console.log(b = "you chose paper, they chose paper");
+        console.log(b = "you tied!");
     }
 
     else if ((a == "scissors") && (b == "paper"))
     {
-        console.log(b = "you chose scissors, they chose paper");
+        console.log(b = "you win! scissors beats paper :(");
     }
 
 //B = SCISSORS
     else if ((a == "rock") && (b == "scissors"))
     {
-        console.log(b = "you chose rock, they chose scissors");
+        console.log(b = "you win! rock beats scissors :(");
     }
 
     else if ((a == "paper") && (b == "scissors"))
     {
-        console.log(b = "you chose paper, they chose scissors");
+        console.log(b = "you lost! scissors beats paper :)");
     }
 
     else if ((a == "scissors") && (b == "scissors"))
     {
-        console.log(b = "you chose scissors, they chose scissors");
+        console.log(b = "you tied!");
     }
 //ELSE
     else

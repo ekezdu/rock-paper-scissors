@@ -1,5 +1,3 @@
-//VARIABLES
-
 
 // HUMAN CHOICE
 
@@ -10,8 +8,9 @@ function getHumanChoice()
     //STATEMENTS
     return humanChoicePrompt;
 }
-//LOG CHECK
-// console.log(humanChoicePrompt);
+
+
+///////////////////////////////////
 
 //COMPUTER CHOICE
 
@@ -37,35 +36,27 @@ function getComputerChoice()
     }
     
 }
-//FUNCTION CALL
-// getComputerChoice();
-// // //LOG CHECK
-// console.log(getComputerChoice());
-
-//NEXT STEP 
 
 
+//////////////////////////////
 
 
+//GLOBAL VARIABLE SCORES
 
+    let humanScore = 0;
+    let computerScore = 0;
+
+//////////////////////////
+
+//GAMEPLAY CODE
 
 function playGame()
 {
 //VARIABLES
-    let humanScore = 0;
-    let computerScore = 0;
 
     const roundOneX= getHumanChoice();
     const roundOneY = getComputerChoice();
 
-    const roundTwoX= getHumanChoice();
-    const roundTwoY = getComputerChoice();
-
-
-    function roundResult()
-    {
-        alert("okay go again!");
-    }
 //PLAYROUND FUNCTION
         function playRound(a, b) {
         console.log("YOUR GUESS: " + a);
@@ -131,35 +122,145 @@ function playGame()
             {
                 console.log(b = "please enter a valid answer :(");
             }
-            console.log("YOUR SCORE " + humanScore);
-        console.log("MY SCORE " +computerScore);
+
         }
     playRound(roundOneX, roundOneY);
-    roundResult();
-    playRound(roundTwoX, roundTwoY);
 
 }
 
-playGame();
+//////////////////////////////////////////////
 
-// Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+//ROUND RESULT
 
-//     Create a new function named playGame. OKAY!
-//     Move your playRound function and score variables so that they’re declared inside of the new playGame function OKAY!
-//     Play 5 rounds by calling playRound 5 times.
-//         Hint: When you assign a function call to a variable, the return value of that function is assigned to the variable. Accessing the variable afterward will only provide the assigned value; it doesn’t recall the function. You need to recall the choice functions to get new choices for each round.
-//         Re-work your previous functions or create more helper functions if necessary. Specifically, you may want to change the return values to something more useful.
-//         If you already know about loops, you can use them. If not, don’t worry! Loops will be covered in the next lesson.
+function roundResult()
+{
+    console.log("YOUR SCORE " +humanScore);
+    console.log("MY SCORE " +computerScore);
+}
+
+////////////////////////////////////////////
+
+//RUN ROUNDS
+
+function runRounds()
+{
+//ROUND ONE
+    if (confirm("lets go!")) 
+        {
+        playGame();
+        } 
+        else 
+        {
+        txt = "You pressed Cancel!";
+        } 
+
+    roundResult();
+//
+    if (humanScore > computerScore)
+    {
+        alert("you won this one!");
+    }
+    else 
+    {
+        alert("you lost! >:D");
+    }
+
+//ROUND TWO
+    if (confirm("another one!")) 
+        {
+        playGame();
+        } 
+        else 
+        {
+        txt = "You pressed Cancel!";
+        } 
+
+    roundResult();
+//
+
+    if (humanScore > computerScore)
+    {
+        alert("you're winning :(");
+    }
+    else 
+    {
+        alert("you lost! mwahahaha!");
+    }
+
+//ROUND THREE
+    if (confirm("another one!")) 
+        {
+        playGame();
+        } 
+        else 
+        {
+        txt = "You pressed Cancel!";
+        } 
+
+    roundResult();
+//
+
+    if (humanScore > computerScore)
+    {
+        alert("stop winning D:");
+    }
+    else 
+    {
+        alert("i'm winning!!! yayyy!");
+    }
+
+//ROUND FOUR
+    if (confirm("another one!")) 
+        {
+        playGame();
+        } 
+        else 
+        {
+        txt = "You pressed Cancel!";
+        } 
+
+    roundResult();
 
 
+    if (humanScore > computerScore)
+    {
+        alert("nyoooooo");
+    }
+    else 
+    {
+        alert("you don't stand a chance!");
+    }
+
+//ROUND FIVE
+    if (confirm("one more!")) 
+        {
+        playGame();
+        } 
+        else 
+        {
+        txt = "You pressed Cancel!";
+        } 
+
+    roundResult();
 
 
+    if (humanScore > computerScore)
+    {
+        alert("waaaah you beat meeeee");
+    }
+    else 
+    {
+        alert("you lost! hahahaha!!! yay!!!");
+    }
+
+}
+
+//CALL 
+
+runRounds();
 
 
-
-
-
-
+////////////////////////////////////
 
 
 
